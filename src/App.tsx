@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Number from "./Number";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -7,7 +8,7 @@ function App() {
   }
   return (    
     <div>
-      <h2>{counter}</h2>
+      <h2><Number count={counter}/></h2>
       <button type="button" onClick={add}>Add</button>
     </div>
   )
