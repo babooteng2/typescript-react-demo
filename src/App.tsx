@@ -1,23 +1,16 @@
-import React from 'react';
+import React, { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">        
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [counter, setCounter] = useState(0);
+  const add = () => {
+     setCounter(prev=>(prev + 1))
+  }
+  return (    
+    <div>
+      <h2>{counter}</h2>
+      <button type="button" onClick={add}>Add</button>
     </div>
-  );
+  )
 }
 
 export default App;
